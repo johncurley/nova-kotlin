@@ -1,0 +1,6 @@
+{
+  "server_not_found": "Kotlin Language Server nicht gefunden.",
+  "install_instructions": "Installation über Homebrew:",
+  "install_command": "brew install kotlin-language-server",
+  "custom_path_option": "Oder einen benutzerdefinierten Pfad in Einstellungen → Erweiterungen → Kotlin festlegen."
+}

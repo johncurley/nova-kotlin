@@ -1,0 +1,6 @@
+{
+  "server_not_found": "Kotlin Language Server が見つかりません。",
+  "install_instructions": "Homebrew でインストール：",
+  "install_command": "brew install kotlin-language-server",
+  "custom_path_option": "または環境設定 → 拡張機能 → Kotlin でカスタムパスを設定してください。"
+}
