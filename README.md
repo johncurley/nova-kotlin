@@ -1,66 +1,71 @@
 # Kotlin for Nova
 
-Kotlin language support for [Nova](https://nova.app/), including:
+Kotlin language support for [Nova](https://nova.app/) editor on macOS.
 
-- Syntax highlighting for `.kt` and `.kts` files
-- Kotlin Language Server (LSP) integration
-- Autocomplete, hover docs, diagnostics, go-to-definition, and more
-- Multi-language support (English, Chinese, French, German, Japanese)
+## 📦 What's Available
+
+### Syntax-Only Version (Nova Extension Library)
+- ✅ **Syntax highlighting** for `.kt` and `.kts` files
+- ✅ **Compatible** with Nova 11.10+
+- ✅ **Easy installation** from Extension Library
+
+### Full LSP Version (Manual Install)
+- ✅ **Everything from syntax version**
+- ✅ **Language Server integration** (autocomplete, hover, diagnostics)
+- ✅ **Go-to-definition** and advanced features
+- ⚠️ **Requires** manual kotlin-language-server installation
 
 ## 🚀 Installation
 
-### From Nova Extension Library (Recommended)
+### Option 1: Syntax-Only (Extension Library)
 1. Open Nova
 2. Go to **Extensions → Extension Library...**
-3. Search for "Kotlin"
+3. Search for "Kotlin Syntax"
 4. Click **Install**
+5. Open any `.kt` or `.kts` file - syntax highlighting works immediately!
 
-### Manual Installation
-1. Clone or download this repository
-2. In Nova, go to **Extensions → Activate Local Extension…** and select this folder
-3. Open a `.kt` or `.kts` file to test
-
-## 🔧 Kotlin Language Server
-
-This extension requires [`kotlin-language-server`](https://github.com/fwcd/kotlin-language-server) for full language support.
-
-### Installation
-
-```sh
-brew install kotlin-language-server
-```
-
-### Configuration
-
-You can customize the language server path in Nova's preferences:
-
-1. Go to **Nova → Preferences → Extensions → Kotlin**
-2. Set **Kotlin Language Server Path** to your custom path (optional)
+### Option 2: Full LSP Version (Manual)
+1. **Install kotlin-language-server**:
+   ```sh
+   brew install kotlin-language-server
+   ```
+2. **Get the extension**:
+   - Clone this repository
+   - Use the `ScanFlow.novakotlin.novaextension` folder
+3. **Activate in Nova**:
+   - Go to **Extensions → Activate Local Extension…**
+   - Select the extension folder
+4. **Configure (optional)**:
+   - **Nova → Preferences → Extensions → Kotlin**
+   - Set custom **Kotlin Language Server Path** if needed
 
 ## ✨ Features
 
-- **Syntax Highlighting**: Full Kotlin syntax support including:
-  - Keywords, operators, and built-in types
-  - String templates and raw strings
-  - Comments and annotations
-  - Function and class declarations
-  - Generics and lambda expressions
+### Syntax Highlighting (Both Versions)
+- Keywords, operators, and built-in types
+- String templates and raw strings  
+- Comments and annotations
+- Function and class declarations
+- Generics and lambda expressions
 
-- **Language Server Integration**:
-  - Code completion
-  - Hover information
-  - Diagnostics and error reporting
-  - Go to definition
-  - Document formatting
+### Language Server Features (Manual Install Only)
+- Code completion and IntelliSense
+- Hover information and documentation
+- Real-time diagnostics and error reporting
+- Go to definition and navigation
+- Document formatting
 
-## 🌍 Localization
+## 📁 Repository Structure
 
-The extension supports multiple languages:
-- English
-- Chinese (Simplified)
-- French
-- German
-- Japanese
+```
+nova-kotlin/
+├── ScanFlow.novakotlin.novaextension/        # Full LSP version
+├── ScanFlow.novakotlin-syntax.novaextension/  # Syntax-only (submitted)
+├── extensions/
+│   ├── legacy/                               # Nova 11.10+ compatible
+│   └── modern/                               # Future Nova versions
+└── shared/                                   # Shared assets
+```
 
 ## 🐛 Issues & Support
 

@@ -10,6 +10,12 @@ Thumbs.db
 # Nova
 .nova/
 
+# Claude Code
+.claude/
+
+# Extension backups
+*.novaextension.backup
+
 # Logs
 logs
 *.log

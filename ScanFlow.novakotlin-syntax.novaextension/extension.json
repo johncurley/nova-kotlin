@@ -1,0 +1,15 @@
+{
+    "identifier": "ScanFlow.novakotlin",
+    "name": "Kotlin Syntax",
+    "organization": "com.scanflowit",
+    "description": "Kotlin syntax highlighting for Nova.",
+    "version": "1.0.0",
+    "license": "MIT",
+    "homepage": "https://github.com/johncurley/nova-kotlin",
+    "repository": "https://github.com/johncurley/nova-kotlin",
+    "bugs": "https://github.com/johncurley/nova-kotlin/issues",
+    "categories": ["languages"],
+    "grammars": [
+        "Syntaxes/kotlin.tmLanguage.json"
+    ]
+}
