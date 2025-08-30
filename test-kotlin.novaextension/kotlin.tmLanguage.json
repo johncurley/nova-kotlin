@@ -1,0 +1,20 @@
+{
+  "scopeName": "source.kotlin",
+  "name": "Kotlin",
+  "fileTypes": ["kt", "kts"],
+  "patterns": [
+    {
+      "name": "keyword.control.kotlin",
+      "match": "\\b(fun|val|var|class)\\b"
+    },
+    {
+      "name": "string.quoted.double.kotlin",
+      "begin": "\"",
+      "end": "\""
+    },
+    {
+      "name": "comment.line.double-slash.kotlin",
+      "match": "//.*$"
+    }
+  ]
+}

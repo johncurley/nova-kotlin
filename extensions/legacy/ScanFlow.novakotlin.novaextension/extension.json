@@ -13,8 +13,18 @@
     "activationEvents": [
         "onLanguage:kotlin"
     ],
+    "languages": [
+        {
+            "id": "kotlin",
+            "name": "Kotlin",
+            "extensions": ["kt", "kts"]
+        }
+    ],
     "grammars": [
-        "Syntaxes/kotlin.tmLanguage.json"
+        {
+            "language": "kotlin",
+            "path": "Syntaxes/kotlin.tmLanguage.json"
+        }
     ],
     "entitlements": [
         "process",

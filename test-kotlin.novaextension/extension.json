@@ -1,0 +1,19 @@
+{
+    "identifier": "test.kotlin.simple",
+    "name": "Test Kotlin",
+    "version": "1.0.0",
+    "categories": ["languages"],
+    "languages": [
+        {
+            "id": "kotlin",
+            "name": "Kotlin", 
+            "extensions": ["kt", "kts"]
+        }
+    ],
+    "grammars": [
+        {
+            "language": "kotlin",
+            "path": "kotlin.tmLanguage.json"
+        }
+    ]
+}

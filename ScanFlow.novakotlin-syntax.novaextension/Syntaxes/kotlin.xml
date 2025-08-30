@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<syntax name="kotlin">
+    <meta>
+        <name>Kotlin</name>
+        <type>compiled</type>
+        <preferred-file-extension>kt</preferred-file-extension>
+        <default-extension>kt</default-extension>
+    </meta>
+    
+    <detectors>
+        <extension priority="1.0">kt</extension>
+        <extension priority="1.0">kts</extension>
+    </detectors>
+    
+    <indentation>
+        <increase>
+            <expression>(\{[^}\"']*$)|(\[[^\]\"']*$)|(\([^)\"']*$)</expression>
+        </increase>
+        <decrease>
+            <expression>^\s*(\s*\/\*.*\*\/\s*)*[\}\]\)\\]</expression>
+        </decrease>
+    </indentation>
+    
+    <comments>
+        <single>
+            <expression>//</expression>
+        </single>
+        <multiline>
+            <starts-with>
+                <expression>/\*</expression>
+            </starts-with>
+            <ends-with>
+                <expression>\*/</expression>
+            </ends-with>
+        </multiline>
+    </comments>
+    
+    <brackets>
+        <pair open="{" close="}" />
+        <pair open="[" close="]" />
+        <pair open="(" close=")" />
+    </brackets>
+    
+    <surrounding-pairs>
+        <pair open="{" close="}" />
+        <pair open="[" close="]" />
+        <pair open="(" close=")" />
+        <pair open="&quot;" close="&quot;" />
+        <pair open="&apos;" close="&apos;" />
+    </surrounding-pairs>
+    
+    <scopes>
+        <include syntax="self" collection="comments" />
+        <include syntax="self" collection="strings" />
+        <include syntax="self" collection="numbers" />
+        <include syntax="self" collection="keywords" />
+        <include syntax="self" collection="types" />
+        <include syntax="self" collection="functions" />
+        <include syntax="self" collection="annotations" />
+        <include syntax="self" collection="operators" />
+    </scopes>
+    
+    <collections>
+        <collection name="comments">
+            <scope name="kotlin.comment.line">
+                <expression>//.*</expression>
+            </scope>
+            <scope name="kotlin.comment.block">
+                <starts-with>
+                    <expression>/\*</expression>
+                </starts-with>
+                <ends-with>
+                    <expression>\*/</expression>
+                </ends-with>
+            </scope>
+        </collection>
+        
+        <collection name="strings">
+            <scope name="kotlin.string.double">
+                <starts-with>
+                    <expression>"</expression>
+                </starts-with>
+                <ends-with>
+                    <expression>"</expression>
+                </ends-with>
+                <subscopes>
+                    <scope name="kotlin.string.escape">
+                        <expression>\\.</expression>
+                    </scope>
+                    <scope name="kotlin.string.template">
+                        <expression>\$\{[^}]*\}</expression>
+                    </scope>
+                    <scope name="kotlin.string.template">
+                        <expression>\$[a-zA-Z_][a-zA-Z0-9_]*</expression>
+                    </scope>
+                </subscopes>
+            </scope>
+            <scope name="kotlin.string.raw">
+                <starts-with>
+                    <expression>"""</expression>
+                </starts-with>
+                <ends-with>
+                    <expression>"""</expression>
+                </ends-with>
+            </scope>
+            <scope name="kotlin.string.single">
+                <starts-with>
+                    <expression>'</expression>
+                </starts-with>
+                <ends-with>
+                    <expression>'</expression>
+                </ends-with>
+                <subscopes>
+                    <scope name="kotlin.string.escape">
+                        <expression>\\.</expression>
+                    </scope>
+                </subscopes>
+            </scope>
+        </collection>
+        
+        <collection name="numbers">
+            <scope name="kotlin.value.number.hex">
+                <expression>\b0[xX][0-9A-Fa-f]+[lL]?\b</expression>
+            </scope>
+            <scope name="kotlin.value.number.binary">
+                <expression>\b0[bB][01]+[lL]?\b</expression>
+            </scope>
+            <scope name="kotlin.value.number.float">
+                <expression>\b\d+\.\d+([eE][+-]?\d+)?[fFdD]?\b</expression>
+            </scope>
+            <scope name="kotlin.value.number.integer">
+                <expression>\b\d+[lLfFdD]?\b</expression>
+            </scope>
+        </collection>
+        
+        <collection name="keywords">
+            <scope name="kotlin.keyword">
+                <strings>
+                    <string>abstract</string>
+                    <string>actual</string>
+                    <string>annotation</string>
+                    <string>as</string>
+                    <string>break</string>
+                    <string>by</string>
+                    <string>catch</string>
+                    <string>class</string>
+                    <string>companion</string>
+                    <string>const</string>
+                    <string>constructor</string>
+                    <string>continue</string>
+                    <string>crossinline</string>
+                    <string>data</string>
+                    <string>do</string>
+                    <string>dynamic</string>
+                    <string>else</string>
+                    <string>enum</string>
+                    <string>expect</string>
+                    <string>external</string>
+                    <string>false</string>
+                    <string>final</string>
+                    <string>finally</string>
+                    <string>for</string>
+                    <string>fun</string>
+                    <string>get</string>
+                    <string>if</string>
+                    <string>import</string>
+                    <string>in</string>
+                    <string>inline</string>
+                    <string>inner</string>
+                    <string>interface</string>
+                    <string>internal</string>
+                    <string>is</string>
+                    <string>lateinit</string>
+                    <string>noinline</string>
+                    <string>null</string>
+                    <string>object</string>
+                    <string>open</string>
+                    <string>operator</string>
+                    <string>out</string>
+                    <string>override</string>
+                    <string>package</string>
+                    <string>private</string>
+                    <string>protected</string>
+                    <string>public</string>
+                    <string>reified</string>
+                    <string>return</string>
+                    <string>sealed</string>
+                    <string>set</string>
+                    <string>super</string>
+                    <string>suspend</string>
+                    <string>tailrec</string>
+                    <string>this</string>
+                    <string>throw</string>
+                    <string>true</string>
+                    <string>try</string>
+                    <string>typealias</string>
+                    <string>typeof</string>
+                    <string>val</string>
+                    <string>var</string>
+                    <string>vararg</string>
+                    <string>when</string>
+                    <string>where</string>
+                    <string>while</string>
+                </strings>
+            </scope>
+        </collection>
+        
+        <collection name="types">
+            <scope name="kotlin.identifier.type">
+                <expression>\b[A-Z][a-zA-Z0-9_]*\b</expression>
+            </scope>
+        </collection>
+        
+        <collection name="functions">
+            <scope name="kotlin.identifier.function">
+                <expression>\b[a-zA-Z_][a-zA-Z0-9_]*\s*(?=\()</expression>
+            </scope>
+        </collection>
+        
+        <collection name="annotations">
+            <scope name="kotlin.identifier.decorator">
+                <expression>@[a-zA-Z_][a-zA-Z0-9_]*</expression>
+            </scope>
+        </collection>
+        
+        <collection name="operators">
+            <scope name="kotlin.operator">
+                <strings>
+                    <string>+</string>
+                    <string>-</string>
+                    <string>*</string>
+                    <string>/</string>
+                    <string>%</string>
+                    <string>=</string>
+                    <string>==</string>
+                    <string>!=</string>
+                    <string>&lt;</string>
+                    <string>&lt;=</string>
+                    <string>&gt;</string>
+                    <string>&gt;=</string>
+                    <string>&amp;&amp;</string>
+                    <string>||</string>
+                    <string>!</string>
+                    <string>?:</string>
+                    <string>?.</string>
+                    <string>!!</string>
+                    <string>..</string>
+                    <string>-&gt;</string>
+                    <string>=&gt;</string>
+                </strings>
+            </scope>
+        </collection>
+    </collections>
+</syntax>

@@ -1,15 +1,26 @@
 {
-    "identifier": "ScanFlow.novakotlin",
+    "identifier": "ScanFlow.novakotlin-syntax",
     "name": "Kotlin Syntax",
     "organization": "John Curley",
     "description": "Kotlin syntax highlighting for Nova.",
-    "version": "1.0.0",
+    "version": "1.0.2",
+    "min_runtime": "6.0",
     "license": "MIT",
     "homepage": "https://github.com/johncurley/nova-kotlin",
     "repository": "https://github.com/johncurley/nova-kotlin",
     "bugs": "https://github.com/johncurley/nova-kotlin/issues",
     "categories": ["languages"],
+    "languages": [
+        {
+            "id": "kotlin",
+            "name": "Kotlin",
+            "extensions": ["kt", "kts"]
+        }
+    ],
     "grammars": [
-        "Syntaxes/kotlin.tmLanguage.json"
+        {
+            "language": "kotlin",
+            "path": "Syntaxes/kotlin.xml"
+        }
     ]
 }

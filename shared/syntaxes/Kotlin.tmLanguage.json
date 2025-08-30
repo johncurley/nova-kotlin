@@ -107,13 +107,19 @@
     "functions": {
       "patterns": [
         {
-          "name": "entity.name.function.declaration.kotlin",
-          "match": "\\bfun\\s+([a-zA-Z_][a-zA-Z0-9_]*)",
-          "captures": { "1": { "name": "entity.name.function.kotlin" } }
+          "name": "meta.function.declaration.kotlin",
+          "match": "\\b(fun)\\s+([a-zA-Z_][a-zA-Z0-9_]*)",
+          "captures": {
+            "1": { "name": "keyword.declaration.kotlin" },
+            "2": { "name": "entity.name.function.kotlin" }
+          }
         },
         {
-          "name": "support.function.call.kotlin",
-          "match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\s*(?=\\()"
+          "name": "meta.function.call.kotlin",
+          "match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\s*(?=\\()",
+          "captures": {
+            "1": { "name": "entity.name.function.call.kotlin" }
+          }
         }
       ]
     },

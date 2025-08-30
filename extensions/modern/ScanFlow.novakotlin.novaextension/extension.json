@@ -13,13 +13,12 @@
     "activationEvents": [
         "onLanguage:kotlin"
     ],
-    "syntaxes": [
-        "Syntaxes/kotlin.xml"
-    ],
-    "queries": [
-        "Queries/highlights.scm",
-        "Queries/folds.scm",
-        "Queries/symbols.scm"
+    "languages": [
+        {
+            "id": "kotlin",
+            "name": "Kotlin",
+            "extensions": ["kt", "kts"]
+        }
     ],
     "entitlements": [
         "process",
