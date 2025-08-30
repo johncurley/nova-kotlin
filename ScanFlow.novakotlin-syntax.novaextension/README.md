@@ -1,46 +1,42 @@
-<!--
-👋 Hello! As Nova users browse the extensions library, a good README can help them understand what your extension does, how it works, and what setup or configuration it may require.
+# Kotlin Syntax for Nova
 
-Not every extension will need every item described below. Use your best judgement when deciding which parts to keep to provide the best experience for your new users.
+**Kotlin Syntax** provides comprehensive syntax highlighting for Kotlin files in [Nova](https://nova.app/) editor.
 
-💡 Quick Tip! As you edit this README template, you can preview your changes by selecting **Extensions → Activate Project as Extension**, opening the Extension Library, and selecting "nova-kotlin" in the sidebar.
+## Features
 
-Let's get started!
--->
-
-<!--
-🎈 Include a brief description of the features your syntax extension provides. For example:
--->
-
-**nova-kotlin** provides syntax highlighting and autocompletion for **An Important Language**.
-
-<!--
-🎈 It can also be helpful to include a screenshot or GIF showing your extension in action:
--->
-
-![](https://nova.app/images/en/dark/editor.png)
+- ✨ **Syntax highlighting** for `.kt` and `.kts` files
+- 🎯 **Keywords, operators, and built-in types** 
+- 📝 **String templates and raw strings**
+- 💬 **Comments and annotations**
+- 🏗️ **Function and class declarations**
+- 🔧 **Generics and lambda expressions**
 
 ## Language Support
 
-<!--
-🎈 Whether your extension covers the entirety of a language's syntax or a subset, it can be helpful to describe that for users:
--->
+This extension provides complete syntax highlighting for Kotlin including:
 
-nova-kotlin currently supports the following features of Important Language:
+- Keywords and control structures
+- Data types and type annotations
+- String literals with template expressions
+- Comments (line and block)
+- Function declarations and calls
+- Class and object declarations
+- Annotations and metadata
+- Generics and type parameters
+- Lambda expressions and higher-order functions
 
-- Lorem
-- Ipsum
-- Dolor
+## Installation
 
-Support for:
+1. Open Nova
+2. Go to **Extensions → Extension Library...**
+3. Search for "Kotlin Syntax"
+4. Click **Install**
+5. Open any `.kt` or `.kts` file - syntax highlighting works immediately!
 
-- Sit
-- Amet 
+## Need More Features?
 
-is planned for a future update.
+This extension focuses on syntax highlighting only. If you need Language Server Protocol (LSP) features like autocomplete, diagnostics, and go-to-definition, check out the full [Kotlin extension](https://github.com/johncurley/nova-kotlin) which requires manual installation of kotlin-language-server.
 
-<!--
-👋 That's it! Happy developing!
+## Issues & Support
 
-P.S. If you'd like, you can remove these comments before submitting your extension 😉
--->
+If you encounter any issues, please [open an issue](https://github.com/johncurley/nova-kotlin/issues) on GitHub.

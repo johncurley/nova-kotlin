@@ -1,46 +1,67 @@
-<!--
-👋 Hello! As Nova users browse the extensions library, a good README can help them understand what your extension does, how it works, and what setup or configuration it may require.
+# Kotlin for Nova (Full LSP)
 
-Not every extension will need every item described below. Use your best judgement when deciding which parts to keep to provide the best experience for your new users.
+**Kotlin for Nova** provides complete Kotlin language support including syntax highlighting and Language Server Protocol (LSP) integration for [Nova](https://nova.app/) editor.
 
-💡 Quick Tip! As you edit this README template, you can preview your changes by selecting **Extensions → Activate Project as Extension**, opening the Extension Library, and selecting "nova-kotlin" in the sidebar.
+## Features
 
-Let's get started!
--->
+### Syntax Highlighting
+- ✨ **Complete syntax highlighting** for `.kt` and `.kts` files
+- 🎯 **Keywords, operators, and built-in types**
+- 📝 **String templates and raw strings** 
+- 💬 **Comments and annotations**
+- 🏗️ **Function and class declarations**
+- 🔧 **Generics and lambda expressions**
 
-<!--
-🎈 Include a brief description of the features your syntax extension provides. For example:
--->
+### Language Server Features
+- 🔍 **Code completion** and IntelliSense
+- 📖 **Hover information** and documentation
+- ⚡ **Real-time diagnostics** and error reporting
+- 🎯 **Go to definition** and navigation
+- 📐 **Document formatting**
 
-**nova-kotlin** provides syntax highlighting and autocompletion for **An Important Language**.
+## Installation
 
-<!--
-🎈 It can also be helpful to include a screenshot or GIF showing your extension in action:
--->
+### Prerequisites
+First, install the Kotlin Language Server:
 
-![](https://nova.app/images/en/dark/editor.png)
+```bash
+brew install kotlin-language-server
+```
+
+### Extension Setup
+1. **Clone or download** this repository
+2. **In Nova**: Go to **Extensions → Activate Local Extension…**
+3. **Select** the `ScanFlow.novakotlin.novaextension` folder
+4. **Open** any `.kt` or `.kts` file to activate
+
+### Configuration (Optional)
+- Go to **Nova → Preferences → Extensions → Kotlin**
+- Set custom **Kotlin Language Server Path** if needed (defaults to `kotlin-language-server`)
 
 ## Language Support
 
-<!--
-🎈 Whether your extension covers the entirety of a language's syntax or a subset, it can be helpful to describe that for users:
--->
+This extension provides comprehensive Kotlin support including:
 
-nova-kotlin currently supports the following features of Important Language:
+- **All syntax highlighting features** from the syntax-only version
+- **Autocomplete** for classes, functions, and variables  
+- **Error checking** and diagnostics as you type
+- **Hover documentation** for symbols and APIs
+- **Go-to-definition** navigation
+- **Document formatting** and code style
 
-- Lorem
-- Ipsum
-- Dolor
+## Troubleshooting
 
-Support for:
+If the language server isn't working:
 
-- Sit
-- Amet 
+1. **Verify installation**: Run `kotlin-language-server --version` in Terminal
+2. **Check preferences**: Ensure the path is correct in Nova preferences  
+3. **Restart Nova** after making configuration changes
+4. **Check Extension Console** for error messages
 
-is planned for a future update.
+## Alternative: Syntax-Only Version
 
-<!--
-👋 That's it! Happy developing!
+If you only need syntax highlighting without LSP features, consider the simpler [Kotlin Syntax](https://github.com/johncurley/nova-kotlin) extension available in the Nova Extension Library.
 
-P.S. If you'd like, you can remove these comments before submitting your extension 😉
--->
+## Issues & Support
+
+If you encounter any issues, please [open an issue](https://github.com/johncurley/nova-kotlin/issues) on GitHub.

@@ -1,46 +1,42 @@
-<!--
-👋 Hello! As Nova users browse the extensions library, a good README can help them understand what your extension does, how it works, and what setup or configuration it may require.
+# Kotlin for Nova (Legacy - Nova 11.10+)
 
-Not every extension will need every item described below. Use your best judgement when deciding which parts to keep to provide the best experience for your new users.
+**Legacy Kotlin Extension** provides Kotlin language support for older Nova versions (11.10+).
 
-💡 Quick Tip! As you edit this README template, you can preview your changes by selecting **Extensions → Activate Project as Extension**, opening the Extension Library, and selecting "nova-kotlin" in the sidebar.
+⚠️ **Note**: This is a legacy version for compatibility with older Nova releases. For the latest features and improvements, use the main extension versions in the root directory.
 
-Let's get started!
--->
+## Features
 
-<!--
-🎈 Include a brief description of the features your syntax extension provides. For example:
--->
+- ✨ **Syntax highlighting** for `.kt` and `.kts` files
+- 🔍 **Language Server Protocol** integration
+- 📖 **Code completion** and diagnostics
+- 🎯 **Go-to-definition** support
 
-**nova-kotlin** provides syntax highlighting and autocompletion for **An Important Language**.
+## Installation
 
-<!--
-🎈 It can also be helpful to include a screenshot or GIF showing your extension in action:
--->
+### Prerequisites
+Install the Kotlin Language Server:
 
-![](https://nova.app/images/en/dark/editor.png)
+```bash
+brew install kotlin-language-server
+```
 
-## Language Support
+### Extension Setup
+1. **Clone or download** this repository
+2. **In Nova**: Go to **Extensions → Activate Local Extension…**
+3. **Select** the `extensions/legacy/ScanFlow.novakotlin.novaextension` folder
+4. **Open** any `.kt` or `.kts` file to activate
 
-<!--
-🎈 Whether your extension covers the entirety of a language's syntax or a subset, it can be helpful to describe that for users:
--->
+## Compatibility
 
-nova-kotlin currently supports the following features of Important Language:
+- **Nova 11.10+** - This legacy version
+- **Nova 12.0+** - Use the main extension versions in the root directory
 
-- Lorem
-- Ipsum
-- Dolor
+## Migration
 
-Support for:
+If you're using a newer version of Nova, consider upgrading to:
+- **Main LSP version**: Better performance and features
+- **Syntax-only version**: Available in Nova Extension Library
 
-- Sit
-- Amet 
+## Issues & Support
 
-is planned for a future update.
-
-<!--
-👋 That's it! Happy developing!
-
-P.S. If you'd like, you can remove these comments before submitting your extension 😉
--->
+If you encounter any issues, please [open an issue](https://github.com/johncurley/nova-kotlin/issues) on GitHub.

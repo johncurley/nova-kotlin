@@ -1,7 +1,7 @@
 {
     "identifier": "ScanFlow.novakotlin",
     "name": "Kotlin Syntax",
-    "organization": "com.scanflowit",
+    "organization": "John Curley",
     "description": "Kotlin syntax highlighting for Nova.",
     "version": "1.0.0",
     "license": "MIT",
